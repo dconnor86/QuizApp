@@ -1,1 +1,43 @@
+body {
+    display: block;
+}
 
+.title{
+border: solid black 1px;
+width: 280px;
+padding: 25px;
+margin: auto;
+margin-top: 15px;
+background-color: gray;
+}
+
+.question{
+border: solid black 1px;
+width: 70%;
+margin:auto;
+margin-top: 25px;
+margin-bottom: 40px;
+padding: 40px;
+font-size: 35px;
+background-color: darkgray;
+}
+
+.answers p{
+border: solid black 1px; 
+margin: auto;
+width: 70%;
+margin-top: 10px;
+padding: 30px;
+font-size: 30px;
+background-color: lightgray;
+}
+
+button{
+display: block;
+font-size: 50px;
+width: 250px;
+border: black 1px solid;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+}
