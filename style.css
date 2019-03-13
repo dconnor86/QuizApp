@@ -1,35 +1,40 @@
 body {
     display: block;
+    background-color: black;
 }
 
 .title{
+font-family: 'Courier New', Courier, monospace;
+font-size: 50px;
 border: solid black 1px;
-width: 280px;
+text-align: center;
+width: 700px;
+height: 150px;
 padding: 25px;
 margin: auto;
 margin-top: 15px;
-background-color: gray;
+background-color: black;
+color: red;
+vertical-align: middle;
 }
 
-.question{
-border: solid black 1px;
-width: 70%;
-margin:auto;
-margin-top: 25px;
-margin-bottom: 40px;
-padding: 40px;
-font-size: 35px;
-background-color: darkgray;
+.titleLogo{
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
 }
 
-.answers p{
+
+
+.QandA p{
+  color: white;
 border: solid black 1px; 
 margin: auto;
 width: 70%;
 margin-top: 10px;
 padding: 30px;
 font-size: 30px;
-background-color: lightgray;
+background-color: black;
 }
 
 button{
@@ -40,4 +45,60 @@ border: black 1px solid;
 margin-left: auto;
 margin-right: auto;
 margin-top: 50px;
+}
+
+ul li{
+list-style: none;
+text-align: center;
+text-align: center;
+margin: auto;
+}
+
+
+.counter{
+  text-align: center;
+  margin: auto;
+color: white;
+}
+
+.questionTemplate{
+  color: white;
+}
+
+.resultsPage{
+ text-align: center;
+ margin: auto;
+  color: white;
+}
+
+.correctAni {
+  color:white;
+  text-align: center;
+  margin: auto;
+}
+
+.incorrect{
+  color:white;
+  text-align: center;
+  margin: auto;
+}
+
+.questionTemplate{
+  font-size: 20px;
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  
+  
+}
+
+.options{
+  text-align: center;
+  margin-top: 5px;
+  
+}
+
+fieldset{
+  border: none;
 }
