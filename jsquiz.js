@@ -41,6 +41,13 @@ if (questionNumber < data.length){
 //what happens when submit button is clicked
 function registerSubmitEventHandling(){
     $('.submitButton').on('click', function(){
+        let selected = $('input:checked').val();
+        console.log(selected)
+        if (selected === undefined){
+            alert('Please select an answer');
+            return;
+        }
+
         renderCorrectAnswer();
  
     })
@@ -91,24 +98,30 @@ function renderFinalScore(){
         <h1> You're on Pole! </h1>
         <img src='https://media1.tenor.com/images/a33a4c7569d15470135330ef1d97917c/tenor.gif?itemid=11149084'>
         <button type = "submit" class = 'restartButton'>Restart</button>
-        </div>`)
+        </div>`);
+        handleRestartButton();
     }else if (score === 9){
         $('.QandA').html(`<div class = resultsPage> 
         <h1> You're on the front row! </h1>
         <img src='https://media.giphy.com/media/mRoCaQMjS6xvgabiho/giphy.gif'>
         <button type = "submit" class = 'restartButton'>Restart</button>
-        </div>`)
+        </div>`);
+        handleRestartButton();
     }else if (score >= 4){
         $('.QandA').html(`<div class = resultsPage> 
         <h1> Middle of the pack </h1>
         <img src='https://media.giphy.com/media/LXTvBYlhAmHHeidlq8/giphy.gif'>
         <button type = "submit" class = 'restartButton'>Restart</button>
-        </div>`)
-    }else {$('.QandA').html(`<div class = resultsPage> 
+        </div>`);
+        handleRestartButton();
+    }else {
+        $('.QandA').html(`<div class = resultsPage> 
     <h1> Crash!!! </h1>
     <img src='https://media.giphy.com/media/dixmGFpBBH3EI/giphy.gif'>
     <button type = "submit" class = 'restartButton'>Restart</button>
-    </div>`)};
+    </div>`);
+    handleRestartButton();
+};
 }
 //what happens when answer is correct
 function correctAnimation(){
@@ -121,6 +134,15 @@ function correctAnimation(){
         <button type = 'submit' class = 'nextQuestion'>Next</button>
         </div>`)
     }
+
+}
+
+function handleRestartButton(){
+    $('.restartButton').on('click', function(){
+        questionNumber=0;
+        score=0;
+        renderQuestion();
+    })
 }
 
 //what happens when answer is wrong
